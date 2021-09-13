@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/welcome"
+            android:src="@drawable/welcome_croped"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/Fist_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:layout_marginBottom="@dimen/layout_margin"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:hint="@string/Hint_1"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/Done"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="@string/done"
+            android:layout_marginTop="@dimen/layout_margin"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/Gif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/happy_new_year"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/wish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/emilys_candy"
+            android:text="@string/Wish"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/Gif_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wish_you_good_luck_"
+            android:visibility="gone" />
+    </LinearLayout>
+    </layout>

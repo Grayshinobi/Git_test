@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Happy new year</string>
+    <string name="Hint_1">Please enter you name</string>
+    <string name="Greeting">Welcom</string>
+    <string name="Second_hint">What is you goal in 2014</string>
+    <string name="done">Done</string>
+    <string name="welcome">Welcome</string>
+    <string name="Wish"></string>
+    <string name="Gender">Male or Female</string>
+</resources>
