@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.roll_button)
-        Toast.makeText(this, "coded by GreyShinobi" , Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Coded by GreyShinobi2013" , Toast.LENGTH_LONG).show()
         rollButton.setOnClickListener{
             rollDice()
         }
