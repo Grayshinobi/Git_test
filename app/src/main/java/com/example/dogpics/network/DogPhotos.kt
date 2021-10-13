@@ -7,3 +7,4 @@ data class DogPhotos(
     val message: List<String>
 
 )
+

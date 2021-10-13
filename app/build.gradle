@@ -53,7 +53,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 
-    // For control over item selection of both touch and mouse driven selection
+
 
 
     //Retrofit

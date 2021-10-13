@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface DogPhotosApiService {
      @GET("50")
-    fun getDogPhotos(): Call<List<DogPhotos>>
+    fun getDogPhotos(): Call<DogPhotos>
 }
