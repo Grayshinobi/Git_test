@@ -4,6 +4,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface DogPhotosApiService {
-     @GET("images")
+     @GET("3")
     fun getDogPhotos(): Call<List<DogPhotos>>
 }
