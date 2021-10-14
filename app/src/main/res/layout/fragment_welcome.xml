@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".welcome">
+
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -44,8 +41,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/_7261034" />
+                app:srcCompat="@drawable/welcome" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-    </FrameLayout>
+
 </layout>
