@@ -9,12 +9,12 @@ import com.bumptech.glide.Glide
 import com.example.dogpics.network.DogPhotos
 import kotlinx.android.synthetic.main.photo_lists.view.*
 
-class DogPhotoAdapter( val context: Context?,  val photoLists: DogPhotos) :
+class DogPhotoAdapter( val context: Context,  val photoLists: DogPhotos) :
     RecyclerView.Adapter<DogPhotoAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(dogPhoto: String) {
-            Glide.with(context!!)
+            Glide.with(context)
                     .load(dogPhoto)
                     .fitCenter()
                     .placeholder(R.drawable.spinner_test4)
