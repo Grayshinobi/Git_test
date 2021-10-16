@@ -7,7 +7,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:scrollbarAlwaysDrawHorizontalTrack="false"
@@ -28,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/dogpic"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_width="400dp"
+                android:layout_height="290dp"
                 android:contentDescription="@string/dog_photos"
                 android:fadingEdge="vertical"
                 android:foregroundGravity="center"

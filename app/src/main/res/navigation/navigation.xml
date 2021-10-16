@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation"
+    xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/welcome">
 
     <fragment
         android:id="@+id/welcome"
-        android:name="com.example.dogpics.welcome"
-        android:label="welcome" >
+        android:name="com.example.dogpics.Welcome"
+        android:label="welcome"
+        tools:layout="@layout/fragment_welcome">
         <action
-            android:id="@+id/action_welcome_to_dogFragment"
-            app:destination="@id/dogFragment" />
+            android:id="@+id/action_welcome_to_userInput"
+            app:destination="@id/userInput" />
     </fragment>
     <fragment
         android:id="@+id/dogFragment"
         android:name="com.example.dogpics.DogFragment"
-        android:label="DogFragment" >
+        android:label="DogFragment"
+        tools:layout="@layout/fragment_dog"
+        />
+    <fragment
+        android:id="@+id/userInput"
+        android:name="com.example.dogpics.UserInput"
+        android:label="UserInput"
+        tools:layout="@layout/fragment_user_input">
         <action
-            android:id="@+id/action_dogFragment_to_welcome"
-            app:destination="@id/welcome" />
+            android:id="@+id/action_userInput_to_dogFragment"
+            app:destination="@id/dogFragment" />
     </fragment>
 </navigation>

@@ -4,13 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2222222222222222" />
+        <entry key="app/src/main/res/layout-land/fragment_welcome.xml" value="0.28590192644483364" />
+        <entry key="app/src/main/res/layout-land/photo_lists.xml" value="0.264" />
+        <entry key="app/src/main/res/layout-port/photo_lists.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dog_list_fragemnt.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_dog.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/layout/fragment_dog_list.xml" value="0.4" />
-        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/fragment_user_input.xml" value="0.40212264150943394" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.2896551724137931" />
         <entry key="app/src/main/res/layout/grid_view_item.xml" value="0.22565687789799072" />
-        <entry key="app/src/main/res/layout/photo_lists.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/photo_lists.xml" value="0.16" />
         <entry key="app/src/main/res/layout/photos.xml" value="0.24954710144927536" />
         <entry key="app/src/main/res/layout/welcome.xml" value="0.20244565217391305" />
       </map>

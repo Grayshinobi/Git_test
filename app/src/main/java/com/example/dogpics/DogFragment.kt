@@ -33,7 +33,6 @@ class DogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_dog,container,false)
-
         recyclerView.setHasFixedSize(false)
         linearLayoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
         recyclerView.layoutManager = linearLayoutManager
@@ -55,7 +54,6 @@ class DogFragment : Fragment() {
 
                     val responseBody = response.body()!!
                     println("response $responseBody")
-                     dogPhotoAdapter.notifyDataSetChanged()
                     dogPhotoAdapter = DogPhotoAdapter(context!!,responseBody)
                     recyclerView.adapter = dogPhotoAdapter
                 } else {

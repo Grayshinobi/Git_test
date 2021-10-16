@@ -9,17 +9,19 @@ import com.bumptech.glide.Glide
 import com.example.dogpics.network.DogPhotos
 import kotlinx.android.synthetic.main.photo_lists.view.*
 
-class DogPhotoAdapter( val context: Context,  val photoLists: DogPhotos) :
+private lateinit var viewModelOfUserInput: UserInputViewModel
+
+class DogPhotoAdapter(val context: Context, val photoLists: DogPhotos) :
     RecyclerView.Adapter<DogPhotoAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(dogPhoto: String) {
             Glide.with(context)
-                    .load(dogPhoto)
-                    .fitCenter()
-                    .placeholder(R.drawable.spinner_test4)
-                    .fitCenter()
-                    .into(itemView.dogpic)
+                .load(dogPhoto)
+                .fitCenter()
+                .placeholder(R.drawable.spinner_test4)
+                .fitCenter()
+                .into(itemView.dogpic)
 
         }
 
@@ -38,7 +40,11 @@ class DogPhotoAdapter( val context: Context,  val photoLists: DogPhotos) :
 
 
     override fun getItemCount(): Int {
-        return photoLists.message.size
-    }
+        val limiter : Int = viewModelOfUserInput.limit
+
+         if(limiter < photoLists.message.size) {
+            return limiter
+        }else{ return photoLists.message.size}
+        }
 }
 

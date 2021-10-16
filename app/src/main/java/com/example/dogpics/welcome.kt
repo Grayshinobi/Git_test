@@ -9,16 +9,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.dogpics.databinding.FragmentWelcomeBinding
 
-class welcome : Fragment() {
+class Welcome : Fragment() {
 private lateinit var binding:FragmentWelcomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_welcome,container,false)
 
         binding.button.setOnClickListener {
-            requireView().findNavController().navigate(welcomeDirections.actionWelcomeToDogFragment())
+            requireView().findNavController().navigate(WelcomeDirections.actionWelcomeToUserInput())
         }
         return binding.root
     }

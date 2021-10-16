@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">DogPics</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="welcome">welcome</string>
-    <string name="button">Button</string>
-    <string name="images">images</string>
-    <string name="dog_photos">dog photos</string>
     <string name="proceed">Proceed</string>
+    <string name="dog_photos">dog_photos</string>
+    <string name="welcome">Welcome</string>
+    <string name="bunch_of_dogs">Bunch of dogs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="amout">0->50</string>
+    <string name="number_of_photos">Number of photos</string>
 
 </resources>
