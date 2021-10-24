@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">DogPics</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="proceed">Proceed</string>
+    <string name="welcome">welcome</string>
+    <string name="button">Next</string>
     <string name="dog_photos">dog_photos</string>
-    <string name="welcome">Welcome</string>
-    <string name="bunch_of_dogs">Bunch of dogs</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="amout">0->50</string>
-    <string name="number_of_photos">Number of photos</string>
+    <string name="photos_to_display">Pics to Display</string>
+    <string name="_1_50"><![CDATA[1 -> 50]]></string>
+    <string name="various_dogs">various dogs</string>
 
 </resources>

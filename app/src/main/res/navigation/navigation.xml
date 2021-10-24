@@ -2,30 +2,36 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/welcome">
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeLayout">
 
     <fragment
-        android:id="@+id/welcome"
-        android:name="com.example.dogpics.Welcome"
-        android:label="welcome"
-        tools:layout="@layout/fragment_welcome">
+        android:id="@+id/welcomeLayout"
+        android:name="com.example.dogpics.fragments.WelcomeLayout"
+        android:label="WelcomeLayout"
+        tools:layout="@layout/fragment_welcome_layout">
         <action
-            android:id="@+id/action_welcome_to_userInput"
-            app:destination="@id/userInput" />
+            android:id="@+id/action_welcomeLayout_to_userInput"
+            app:destination="@id/userInput"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
-        android:id="@+id/dogFragment"
-        android:name="com.example.dogpics.DogFragment"
-        android:label="DogFragment"
-        tools:layout="@layout/fragment_dog"
-        />
-    <fragment
         android:id="@+id/userInput"
-        android:name="com.example.dogpics.UserInput"
+        android:name="com.example.dogpics.fragments.UserInput"
         android:label="UserInput"
         tools:layout="@layout/fragment_user_input">
         <action
-            android:id="@+id/action_userInput_to_dogFragment"
-            app:destination="@id/dogFragment" />
+            android:id="@+id/action_userInput_to_dogPhotoFragment"
+            app:destination="@id/dogPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogPhotoFragment"
+        android:name="com.example.dogpics.fragments.DogPhotoFragment"
+        android:label="DogPhotoFragment"
+        tools:layout="@layout/fragment_dog_photo">
+        <action
+            android:id="@+id/action_dogPhotoFragment_to_welcomeLayout2"
+            app:destination="@id/welcomeLayout" />
     </fragment>
 </navigation>

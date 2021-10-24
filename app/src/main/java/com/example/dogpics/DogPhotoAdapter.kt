@@ -6,45 +6,52 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dogpics.network.DogPhotos
+import com.example.dogpics.fragments.DogPhotoFragment
 import kotlinx.android.synthetic.main.photo_lists.view.*
 
-private lateinit var viewModelOfUserInput: UserInputViewModel
+var limit = 3
 
-class DogPhotoAdapter(val context: Context, val photoLists: DogPhotos) :
+class DogPhotoAdapter(private val context: Context, private val photoLists: List<String>) :
     RecyclerView.Adapter<DogPhotoAdapter.ViewHolder>() {
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+       class ViewHolder(itemView: View, private val context: Context) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(dogPhoto: String) {
+           fun bind(dogPhoto: String) {
             Glide.with(context)
-                .load(dogPhoto)
-                .fitCenter()
-                .placeholder(R.drawable.spinner_test4)
-                .fitCenter()
-                .into(itemView.dogpic)
+                    .load(dogPhoto)
+                    .fitCenter()
+                    .placeholder(R.drawable.loading)
+                    .fitCenter()
+                    .into(itemView.dogpic)
+               }
 
-        }
+            fun onClick(itemView: View){
+                itemView.setOnClickListener {
+
+                }
+            }
+
+
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(context).inflate(R.layout.photo_lists, parent, false)
-        return ViewHolder(itemView)
+        return ViewHolder(itemView,context)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val dogPhoto = photoLists.message[position]
+        val dogPhoto = photoLists[position]
         holder.bind(dogPhoto)
     }
 
 
     override fun getItemCount(): Int {
-        val limiter : Int = viewModelOfUserInput.limit
-
-         if(limiter < photoLists.message.size) {
-            return limiter
-        }else{ return photoLists.message.size}
-        }
+        var limit = 1
+        return if (limit < photoLists.size) {
+            limit
+        }else{photoLists.size}
+    }
 }
+
 
