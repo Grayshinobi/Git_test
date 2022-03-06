@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".homeFrag.Home"
+    tools:layout="@layout/fragment_home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/addTask"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:rotationX="-24"
+            android:text="@string/add_a_task"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+
+        <EditText
+            android:id="@+id/editTextTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@color/colorLight"
+            android:hint="@string/task_tile"
+            android:inputType="text"
+            android:text=""
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextDesc"
+            tools:layout_editor_absoluteX="16dp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editTextDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="240dp"
+            android:background="@color/colorLight"
+            android:hint="@string/description"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/button_save"
+            tools:layout_editor_absoluteX="0dp"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="80dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLight"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
