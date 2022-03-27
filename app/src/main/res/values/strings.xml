@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DogPics</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome">welcome</string>
+    <string name="button">Next</string>
+    <string name="dog_photos">dog_photos</string>
+    <string name="textview">TextView</string>
+    <string-array name="dog_pics">
+        <item>All Types</item>
+        <item>Akita</item>
+        <item>Australian</item>
+        <item>Bull Dog</item>
+        <item>Boxer</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="selectedImage">selectedImage</string>
+    <string name="download">Download</string>
+    <string name="amount">Amount</string>
+    <string name="bread">Bread</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

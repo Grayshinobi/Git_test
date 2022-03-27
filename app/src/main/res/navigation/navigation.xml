@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/welcomeLayout">
+
+    <fragment
+        android:id="@+id/dogPhotoFragment"
+        android:name="com.example.dogpics.fragments.DogPhotoFragment"
+        tools:layout="@layout/fragment_dog_photo">
+        <argument
+            android:name="input"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="amount"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_dogPhotoFragment_to_welcomeLayout"
+            app:destination="@id/userInput"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeLayout"
+        android:name="com.example.dogpics.fragments.WelcomeLayout"
+        android:label="@string/welcome"
+        tools:layout="@layout/fragment_welcome_layout">
+        <action
+            android:id="@+id/action_welcomeLayout_to_userInput"
+            app:destination="@id/userInput"
+            app:popEnterAnim="@android:anim/bounce_interpolator"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInput"
+        android:name="com.example.dogpics.fragments.UserInput"
+        android:label="Choose"
+        tools:layout="@layout/fragment_user_input">
+        <action
+            android:id="@+id/action_userInput_to_dogPhotoFragment"
+            app:destination="@id/dogPhotoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.CustomDialog">
+
+
+    <LinearLayout
+        android:id="@+id/CustomDiag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/custom_cardV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#3700B3"
+            app:cardCornerRadius="30dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:animateLayoutChanges="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="9dp"
+                android:padding="9dp"
+                android:background="#FFC107"
+                android:contentDescription="@string/selectedImage"
+                android:focusable="auto"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/dog_breeds_poster_b1" />
+
+            <Button
+                android:id="@+id/download_img"
+                android:layout_marginBottom="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="@string/download"
+                android:visibility="gone" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
