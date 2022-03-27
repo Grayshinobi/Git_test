@@ -14,4 +14,5 @@ Porject made up by using
 -Blur
 
 -Dialog Box
+
 Views used in the project:- RecyclerView , ImagaeView ,TextView , Spinner , ButtonView 
