@@ -4,6 +4,7 @@ checking out the git glow
 This app impliments GET request from an APi 
 
 API :- https://dog.ceo/dog-api/
+
 Porject made up by using
 
 -Retrofit
