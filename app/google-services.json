@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "879001847280",
+    "project_id": "chataddict-664b8",
+    "storage_bucket": "chataddict-664b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879001847280:android:1f4fbe67da3cd70a84c935",
+        "android_client_info": {
+          "package_name": "com.example.chataddict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879001847280-9p17l2qnre8jumb9di9a4h8edjfjdsnk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chataddict",
+            "certificate_hash": "7c771d32f93b29ad71898e99a931a7270c195b3e"
+          }
+        },
+        {
+          "client_id": "879001847280-1onqdjifgf92oat47id5ft628bvld6e7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp-960X77jMcLl6D34txPTle3ic2FFZ9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879001847280-1onqdjifgf92oat47id5ft628bvld6e7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
