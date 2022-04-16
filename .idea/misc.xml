@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/circle_container.xml" value="0.2955" />
+        <entry key="app/src/main/res/drawable/recieve.xml" value="0.2955" />
+        <entry key="app/src/main/res/drawable/sent_message.xml" value="0.2955" />
+        <entry key="app/src/main/res/font-v26/font.xml" value="0.2234375" />
+        <entry key="app/src/main/res/font/font.xml" value="0.2234375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16473259334006055" />
+        <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/fragment_conversation.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1609375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1609375" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.4117647058823529" />
+        <entry key="app/src/main/res/layout/fragment_select_profile_pic.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/layout/image_item_layout.xml" value="0.5714285714285714" />
+        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.40746268656716417" />
+        <entry key="app/src/main/res/layout/message_asset.xml" value="0.6" />
+        <entry key="app/src/main/res/layout/message_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/reciever_asset.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/sender_asset.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
