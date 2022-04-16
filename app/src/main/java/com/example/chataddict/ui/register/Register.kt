@@ -1,5 +1,6 @@
 package com.example.chataddict.ui.register
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
@@ -20,12 +21,13 @@ import com.example.chataddict.databinding.FragmentRegisterBinding
 import com.example.chataddict.ui.dataBase.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import java.util.*
 
 class Register : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
-    private var ImageUri: Uri? = null
+    private var imageUri: Uri? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -75,12 +77,12 @@ class Register : Fragment() {
     @Suppress("DEPRECATION")
     private fun selectImage() {
 
-      val selectImage = binding.profilePic
+        val selectImage = binding.profilePic
         selectImage.setOnClickListener {
-            Log.d("Registration","show image selector")
+            Log.d("Registration", "show image selector")
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
-            startActivityForResult(intent,0)
+            startActivityForResult(intent, 0)
 
 
         }
@@ -91,9 +93,10 @@ class Register : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 0) {
-            Log.d("Registration" ,"Image was selected $requestCode")
-            ImageUri = data?.data
-            val bitmap = MediaStore.Images.Media.getBitmap(requireContext().contentResolver, ImageUri)
+            Log.d("Registration", "Image was selected $requestCode")
+            imageUri = data?.data
+            val bitmap =
+                MediaStore.Images.Media.getBitmap(requireContext().contentResolver, imageUri)
             val bitMapDrawable = BitmapDrawable(bitmap)
             binding.profilePic.setBackgroundDrawable(bitMapDrawable)
         }
@@ -102,49 +105,60 @@ class Register : Fragment() {
     private fun registering(email: String, pass: String) {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, pass)
             .addOnCompleteListener {
-                if (it.isSuccessful) {
-                    printToast()
-                    Log.d("Registration"," User successfully registered!!!")
-                    Log.d("Registration","email: ${email} + password: $pass")
-                    uploadImageToFirebase()
-                    requireView().findNavController().navigate(R.id.action_register_to_LogIn)
-                } else {
-                    Toast.makeText(requireContext(), "Not registered !!!", Toast.LENGTH_LONG).show()
-                }
-                return@addOnCompleteListener
+                if (!it.isSuccessful) return@addOnCompleteListener
+
+                printToast(context)
+                Log.d("Registration", " User successfully registered!!!")
+                Log.d("Registration", "email: $email + password: $pass")
+
+                uploadImageToFirebase()
+                requireView().findNavController().navigate(R.id.action_register_to_LogIn)
+
             }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Not registered !!!", Toast.LENGTH_LONG)
+                    .show()
+            }
+
     }
 
 
-    private fun printToast() {
+    private fun printToast(context: Context?) {
 
 
-            Toast.makeText(requireContext(), "registered Successful!!!", Toast.LENGTH_LONG)
+        Toast.makeText(context, "registered Successful!!!", Toast.LENGTH_LONG).show()
+
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            Toast.makeText(
+                context,
+                "LogIn using registered account 😎",
+                Toast.LENGTH_LONG
+            )
                 .show()
-
-
-        Handler(Looper.getMainLooper()).postDelayed ({ Toast.makeText(requireContext(), "LogIn using registered account 😎", Toast.LENGTH_LONG)
-                .show()
-            },3000)
+        }, 3000)
 
     }
 
     private fun uploadImageToFirebase() {
-        if (ImageUri == null) return
-            val fileName = UUID.randomUUID().toString()
-            val reference = FirebaseStorage.getInstance().getReference("/images/${fileName}")
-            ImageUri?.let { it ->
-                reference.putFile(it)
-                    .addOnSuccessListener {
-                        Log.d("Registration", "Image successfully uploaded : ${it.metadata?.path}")
+        Log.d("Registration", "Upload_function accessed")
+        val fileName = UUID.randomUUID().toString()
+        val storage = Firebase.storage
+        val storageRef = storage.reference.child("images/$fileName")
 
-                        reference.downloadUrl.addOnSuccessListener {
-                            Log.d("Registration", "File location : ${it}")
-                        }
-                        saveUserToFirebase(it.toString())
-                    }
+        storageRef.putFile(imageUri!!).addOnSuccessListener {
+            Log.d("Registration", "Image uploaded successfully")
+            storageRef.downloadUrl.addOnSuccessListener {
+                Log.d("Registration", "File Location : $it")
+
+                saveUserToFirebase(it.toString())
             }
         }
+            .addOnFailureListener {
+                Log.d("Registration", "Image not uploaded !!!: ${it.cause}")
+            }
+
+    }
 
 
     private fun saveUserToFirebase(profileImgUrl: String) {
@@ -153,10 +167,15 @@ class Register : Fragment() {
         val email = binding.regEmail.editText?.text.toString()
         val user = User(uid, email, profileImgUrl)
         reference.setValue(user)
-            .addOnCompleteListener {
-                Log.d("Registration", "user completely registered!!!")
+            .addOnSuccessListener {
+                Log.d("Registration", "User saved to firebase")
+            }
+            .addOnFailureListener {
+                Log.d("Registration", "User not save to firebase : ${it.cause}")
             }
     }
-
-
 }
+
+
+
+
