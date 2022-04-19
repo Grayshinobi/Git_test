@@ -4,24 +4,35 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/circle_container.xml" value="0.2955" />
+        <entry key="app/src/main/res/drawable/ic_profile_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/recieve.xml" value="0.2955" />
         <entry key="app/src/main/res/drawable/sent_message.xml" value="0.2955" />
         <entry key="app/src/main/res/font-v26/font.xml" value="0.2234375" />
         <entry key="app/src/main/res/font/font.xml" value="0.2234375" />
+        <entry key="app/src/main/res/layout/LogInActivity_main.xml" value="0.1933876811594203" />
+        <entry key="app/src/main/res/layout/activity_conversation.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_conversatoin.xml" value="0.176" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16473259334006055" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.266304347826087" />
+        <entry key="app/src/main/res/layout/contacts_asset.xml" value="0.18489583333333334" />
+        <entry key="app/src/main/res/layout/content_conversatoin.xml" value="0.17395833333333333" />
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.264" />
         <entry key="app/src/main/res/layout/fragment_conversation.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1609375" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17395833333333333" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1609375" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.4117647058823529" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17395833333333333" />
         <entry key="app/src/main/res/layout/fragment_select_profile_pic.xml" value="0.3020833333333333" />
         <entry key="app/src/main/res/layout/image_item_layout.xml" value="0.5714285714285714" />
-        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.40746268656716417" />
+        <entry key="app/src/main/res/layout/login_fragment.xml" value="0.176" />
         <entry key="app/src/main/res/layout/message_asset.xml" value="0.6" />
         <entry key="app/src/main/res/layout/message_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/reciever_asset.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/layout/sender_asset.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/tool_bar.xml" value="0.1" />
       </map>
     </option>
   </component>

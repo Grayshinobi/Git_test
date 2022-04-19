@@ -2,52 +2,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/LogIn">
-
-    <fragment
-        android:id="@+id/conversation"
-        android:name="com.example.chataddict.ui.conversation.ConversationFragment"
-        android:label="@string/Conversation"
-        tools:layout="@layout/fragment_conversation" >
-        <action
-            android:id="@+id/action_conversation_to_contacts"
-            app:destination="@id/contacts" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/contacts"
-        android:name="com.example.chataddict.ui.contacts.ContactsFragment"
-        android:label="@string/Contacts"
-        tools:layout="@layout/fragment_contacts" >
-        <action
-            android:id="@+id/action_contacts_to_conversation"
-            app:destination="@id/conversation" />
-    </fragment>
-    <fragment
-        android:id="@+id/LogIn"
-        android:name="com.example.chataddict.ui.login.LogIn"
-        tools:layout="@layout/login_fragment">
-        <action
-            android:id="@+id/action_LogIn_to_register"
-            app:destination="@id/register" />
-        <action
-            android:id="@+id/action_LogIn_to_conversation"
-            app:destination="@id/conversation" />
-    </fragment>
-    <fragment
-        android:id="@+id/messageFragment"
-        android:name="com.example.chataddict.ui.message.messageFragment"
-        android:label="message_fragment"
-        tools:layout="@layout/message_fragment" />
-    <fragment
-        android:id="@+id/register"
-        android:name="com.example.chataddict.ui.register.Register"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_register_to_LogIn"
-            app:destination="@id/LogIn" />
-    </fragment>
-
-
+    app:startDestination="@id/loginActivity">
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.chataddict.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.chataddict.RegisterActivity"
+        android:label="RegisterActivity"
+        tools:layout="@layout/activity_register"/>
+    <activity
+        android:id="@+id/conversation2"
+        android:name="com.example.chataddict.Conversation"
+        android:label="activity_conversation"
+        tools:layout="@layout/activity_conversation" />
 </navigation>
